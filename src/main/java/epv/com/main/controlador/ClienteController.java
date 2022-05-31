@@ -10,7 +10,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 /**
@@ -60,15 +59,12 @@ public class ClienteController {
             this.mensaje = e.getMessage();
 
         } finally {
-            //em.close();
+            em.close();
         
 
         }
         
-   clientestmp.forEach((c)->{
-       
-       System.err.println("err"+c.toString());
-   });
+
       
       return  clientestmp;
         
